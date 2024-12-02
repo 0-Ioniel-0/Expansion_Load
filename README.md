@@ -1,5 +1,5 @@
 # Expansion Load
-Scripts related to wild guppies expansion load estimation.
+Scripts related to wild guppies genetic load estimation.
 
 This repository contains scripts regarding:
 1) reads trimming
