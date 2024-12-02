@@ -1,5 +1,5 @@
 # Expansion Load
-<small><i>The repository name is misspelled because, this, unfortubnately, is how it appears in my PhD thesis.<i><small>
+<small><i>The repository name is misspelled because, this, unfortubnately, is how it appears in my PhD thesis.</i></small>
 
 Scripts related to wild guppies genetic load estimation.
 
@@ -14,7 +14,7 @@ This repository contains scripts regarding:
     
 !!! For details on the workflow of this project, please look into flowchart.png figure. !!!
 
-<sub>Note that most of the scripts need to be edited to change paths to files and programs. DP thresholds, number of individuals, individuals' positions in the VCF files etc. should also be modified accordingly.<sub>
+<sub>Note that most of the scripts need to be edited to change paths to files and programs. DP thresholds, number of individuals, individuals' positions in the VCF files etc. should also be modified accordingly.</sub>
 
 These scripts were run with:
 
