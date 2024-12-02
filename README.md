@@ -1,5 +1,5 @@
 # Expansion Load
-<small><i>The repository name is misspelled because, this, unfortubnately, is how it appears in my PhD thesis.</i></small>
+<sub><i>The repository name is misspelled because, this, unfortunately, is how it appears in my PhD thesis.</i></sub>
 
 Scripts related to wild guppies genetic load estimation.
 
