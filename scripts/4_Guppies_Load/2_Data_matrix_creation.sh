@@ -11,9 +11,8 @@ module load python/3.10
 p=$1
 
 echo $1
-echo $2
 
 date
 
-python 2_Data_matrix_creation.py --vcf 1_VCFs/${c}_${p}.vcf --out 2_Load --pop $p
+python 2_Data_matrix_creation.py --vcf ${p}.vcf --out load_${p}.txt --pop $p
 date
