@@ -19,20 +19,20 @@ echo 'Chromosome:'
 echo "$POPULATION"
 # Samples file (of given population [with the same name], horizontal list of names, in our example - 14)
 samples=${POPULATION}.txt
-s1=$(echo "$samples" | cut -f1)
-s2=$(echo "$samples" | cut -f2)
-s3=$(echo "$samples" | cut -f3)
-s4=$(echo "$samples" | cut -f4)
-s5=$(echo "$samples" | cut -f5)
-s6=$(echo "$samples" | cut -f6)
-s7=$(echo "$samples" | cut -f7)
-s8=$(echo "$samples" | cut -f8)
-s9=$(echo "$samples" | cut -f9)
-s10=$(echo "$samples" | cut -f10)
-s11=$(echo "$samples" | cut -f11)
-s12=$(echo "$samples" | cut -f12)
-s13=$(echo "$samples" | cut -f13)
-s14=$(echo "$samples" | cut -f14)
+s1=$(cat "$samples" | cut -f1)
+s2=$(cat "$samples" | cut -f2)
+s3=$(cat "$samples" | cut -f3)
+s4=$(cat "$samples" | cut -f4)
+s5=$(cat "$samples" | cut -f5)
+s6=$(cat "$samples" | cut -f6)
+s7=$(cat "$samples" | cut -f7)
+s8=$(cat "$samples" | cut -f8)
+s9=$(cat "$samples" | cut -f9)
+s10=$(cat "$samples" | cut -f10)
+s11=$(cat "$samples" | cut -f11)
+s12=$(cat "$samples" | cut -f12)
+s13=$(cat "$samples" | cut -f13)
+s14=$(cat "$samples" | cut -f14)
 
 # We used GATK 4.1.4.1
 GA=dir/to/gatk
@@ -40,7 +40,6 @@ GA=dir/to/gatk
 # Reference genome file, given third
 REF=$3
 
-# Specify number of threads available (n), PE optiom idicates pair-end data
 echo '========================'
 echo 'GVCF joining starts'
 date
