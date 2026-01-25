@@ -16,7 +16,7 @@ echo "$POPULATION"
 CHROMOSOME=$2
 echo '========================'
 echo 'Chromosome:'
-echo "$POPULATION"
+echo "$CHROMOSOME"
 # Samples file (of given population [with the same name], horizontal list of names, in our example - 14)
 samples=${POPULATION}.txt
 s1=$(cat "$samples" | cut -f1)
