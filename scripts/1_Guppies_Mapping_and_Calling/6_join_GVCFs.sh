@@ -35,7 +35,7 @@ s13=$(cat "$samples" | cut -f13)
 s14=$(cat "$samples" | cut -f14)
 
 # We used GATK 4.1.4.1
-GA=dir/to/gatk
+GATK=dir/to/gatk
 
 # Reference genome file, given third
 REF=$3
@@ -45,7 +45,7 @@ echo 'GVCF joining starts'
 date
 
 $GATK --java-options "-Xmx64G" CombineGVCFs \
--R ${RE} \
+-R ${REF} \
 -O ${CHROMOSOME}_${POPULATION}.g.vcf.gz \
 --variant ${CHROMOSOME}_${s1}.g.vcf.gz \
 --variant ${CHROMOSOME}_${s2}.g.vcf.gz \
