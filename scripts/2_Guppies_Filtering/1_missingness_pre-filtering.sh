@@ -9,19 +9,13 @@ module load bcftools/1.9
 
 #Pre-filtering with max 30% missing data
 #This step is important as following ones are with custom scripts so the less poor data, the better.
-#Chromosome and population
-c=$1
-p=$2
 
-echo $c
-echo $p
+input=$1
+output=filtered_$(basename ${input} .g.vcf.gz).vcf
 echo 'Starting'
 date
 
-bcftools view --threads 5 -i 'F_MISSING <= 0.3' \
--O z \
--o 1_30_missing_pre_filtering/${c}_${p}.g.vcf.gz \
-~/${c}_${p}.g.vcf.gz
+bcftools view --threads 5 -i '((F_PASS(FMT/GQ>=30 & FMT/DP>=6 & GT!="mis") > 0.7) & (TYPE="snp")) | ((F_PASS(FMT/RGQ>=30 & FMT/DP>=6 & GT!="mis") > 0.7) & (TYPE="ref"))' -Ov -o ${output} ${input}
 
 date
 echo 'Finished'
