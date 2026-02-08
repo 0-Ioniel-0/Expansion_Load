@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # GVCF to VCF
-# Having some poor variants removed, let's genotype all remaining sites.
 
 #SBATCH --time=3:00:00
 #SBATCH --mem=16gb
