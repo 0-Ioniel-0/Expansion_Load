@@ -20,8 +20,7 @@ echo 'Output file:'
 echo "${output_file}"
 
 # Third input is a BED file with ancestral alleles in 4th column and conservation score in 5th (after chromosome, start and end.
-# IMPORTANT NOTICE - this script works with 1-based BED, so NOT normal BED, which is 0-based. You can change your BED to 1-based
-# by adding 1 to both START and END. Also, it's best to generally run this script on one chromosome, using just single chromosome
+# IMPORTANT NOTICE - this script works with 1-based BED. Also, it's best to generally run this script on one chromosome, using just single chromosome
 # BED file as well.
 bed_file=$2
 echo '==========='
@@ -29,7 +28,7 @@ echo 'BED file:'
 echo "${bed_file}"
 
 # Fourth input is a name for failed sites file, wich shows the reason for failure, e.g. no AA or no CS.
-fd_file=3_AA_CS_filtered_sites/parts/second_parts/$(basename ${input_file}).fd
+fd_file=$(basename ${input_file}).fd
 echo '==========='
 echo 'Failed sites file:'
 echo "${fd_file}"
@@ -40,7 +39,7 @@ total_lines=$(wc -l < ${input_file})
 echo 'Starting'
 date
 
-python 3_AA_CS_filtered_sites.py \
+python 2_AA_CS_filtered_sites.py \
 --vcf "${input_file}" \
 --out "${output_file}" \
 --bed "${bed_file}" \

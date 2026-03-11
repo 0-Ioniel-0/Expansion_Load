@@ -7,7 +7,7 @@
 
 module load bcftools/1.9
 
-#Pre-filtering with max 30% missing data
+#Pre-filtering with max 30% missing data based on minimal DP and GQ (treated as missing if not meeting thresholds).
 #This step is important as following ones are with custom scripts so the less poor data, the better.
 
 input=$1

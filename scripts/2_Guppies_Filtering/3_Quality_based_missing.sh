@@ -44,7 +44,7 @@ total_lines=$(wc -l < ${input_file})
 echo 'Starting at:'
 date
 
-python 4_Quality_based_missing.py \
+python 3_Quality_based_missing.py \
 --vcf $input_file \
 --out $output_file \
 --fd $fd_file \
