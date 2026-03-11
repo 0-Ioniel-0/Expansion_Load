@@ -11,7 +11,6 @@ This repository contains scripts regarding:
 6)  calculating genetic load
 7)  estimating effective populations size and more...
     
-!!! For details on the workflow of this project, please look into flowchart.png figure. !!!
 
 <sub>Note that most of the scripts need to be edited to change paths to files and programs. DP thresholds, number of individuals, individuals' positions in the VCF files etc. should also be modified accordingly.</sub>
 
